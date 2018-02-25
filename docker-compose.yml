@@ -1,0 +1,27 @@
+version: '2'
+services:
+  php:
+    restart: always
+    image: myphp
+    ports:
+    - "8080:80"
+    - "8081:443"
+    volumes:
+    - ./data/:/var/www/html
+    links:
+    - db:db
+    container_name: apache
+    network_mode: "bridge"
+
+  db:
+    image: mysql:5.7
+    restart: always
+    container_name: db
+    volumes:
+    - ./data/db-dump:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=qsdfghjklm1234
+      - MYSQL_DATABASE=CRAYON
+      - MYSQL_USER=admin_bdd
+      - MYSQL_PASSWORD=lemdp@dm!n_bdd
+    network_mode: "bridge"
