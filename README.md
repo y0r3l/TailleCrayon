@@ -20,15 +20,15 @@ de passe de l’administrateur en utilisant les renseignements d’origine sourc
 
 ## Categories
 
-*OSINT (Open Source INTelligence)
+* OSINT (Open Source INTelligence)
 
 ## Matériel nécessaire pour le résoudre
 
-*Accès à Internet
+* Accès à Internet
 
 ## Matériel nécessaire pour le rejouer
 
-*Docker
+* Docker
 
 ## Mise en place du challenge
 
